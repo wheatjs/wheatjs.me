@@ -1,0 +1,1 @@
+export { useTypedJS } from './typed'
