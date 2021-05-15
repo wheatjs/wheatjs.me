@@ -10,6 +10,7 @@ export default defineConfig({
   },
   plugins: [
     typography(),
+    require('windicss/plugin/aspect-ratio'),
   ],
   theme: {
     extend: {
@@ -24,11 +25,11 @@ export default defineConfig({
               'fontWeight': '500',
               'textDecoration': 'underline',
               'textDecorationStyle': 'wavy',
-              'textDecorationColor': colors.pink[600],
-              'textDecorationThickness': '0.15em',
+              'textDecorationThickness': '0.1em',
               '&:hover': {
                 opacity: 1,
                 color: colors.pink[600],
+                textDecorationColor: colors.pink[600],
               },
             },
             b: { color: 'inherit' },

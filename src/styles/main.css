@@ -6,10 +6,20 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Merriweather', serif;
 }
 
 html.dark {
   @apply bg-dark-800;
+}
+
+html a,
+html .prose a {
+  text-decoration-color: rgba(0, 0, 0, .32);
+}
+
+html.dark a {
+  text-decoration-color: rgba(255, 255, 255, .24);
 }
 
 #nprogress {

@@ -11,6 +11,9 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Prism from 'markdown-it-prism'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
+import anchor from 'markdown-it-anchor'
+import markdownAttr from 'markdown-it-link-attributes'
+import { slugify } from './scripts/slugify'
 
 export default defineConfig({
   resolve: {
@@ -55,11 +58,28 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-md
     Markdown({
-      wrapperClasses: 'prose prose-lg m-auto text-left',
+      wrapperComponent: 'Note',
+      wrapperClasses: '',
       headEnabled: true,
       markdownItSetup(md) {
         // https://prismjs.com/
         md.use(Prism)
+
+        md.use(anchor, {
+          slugify,
+          permalink: true,
+          permalinkBefore: true,
+          permalinkSymbol: '#',
+          permalinkAttrs: () => ({ 'aria-hidden': true }),
+        })
+
+        md.use(markdownAttr, {
+          pattern: /^https?:/,
+          attrs: {
+            target: '_blank',
+            rel: 'noopener',
+          },
+        })
       },
     }),
 

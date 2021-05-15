@@ -5,6 +5,7 @@ import { isDark, toggleDark } from '~/logic'
 
 <template>
   <nav
+    z="100"
     text="dark-100 dark:light-900"
     position="fixed top-0 left-0 right-0"
     bg="dark:(dark-500 opacity-50) white opacity-75"
@@ -25,16 +26,16 @@ import { isDark, toggleDark } from '~/logic'
         <Logo />
       </router-link>
 
-      <router-link to="/posts">
+      <router-link to="/notes">
         <ph-note />
       </router-link>
-      <router-link to="/posts">
+      <router-link to="/projects">
         <ri-git-repository-line />
       </router-link>
-      <a href="https://github.com/wheatjs">
+      <a href="https://github.com/wheatjs" target="_blank" rel="noreferrer noopener">
         <mdi-github />
       </a>
-      <a href="https://twitter.com/wheatjs">
+      <a href="https://twitter.com/wheatjs" target="_blank" rel="noreferrer noopener">
         <mdi-twitter />
       </a>
       <a cursor="pointer" @click="toggleDark">

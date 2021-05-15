@@ -10,7 +10,7 @@
       justify="center"
     >
       <Hello />
-      <div text="dark:(white opacity-75)">
+      <div text="dark:(white opacity-75)" class="about">
         <About class="mx-0" />
       </div>
     </div>
@@ -34,3 +34,9 @@
     </div>
   </div>
 </template>
+
+<style>
+html .about a {
+  text-decoration-color: #db2777 !important;
+}
+</style>
