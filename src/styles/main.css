@@ -13,6 +13,18 @@ html.dark {
   @apply bg-dark-800;
 }
 
+html.dark ::-webkit-scrollbar {
+  @apply bg-dark-900;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  @apply bg-dark-600;
+}
+
+html.dark ::-webkit-resizer {
+  padding: 1rem;
+} 
+
 html a,
 html .prose a {
   text-decoration-color: rgba(0, 0, 0, .32);

@@ -39,25 +39,27 @@ defineProps<{
     </header>
     <div grid="~ lg:cols-3" gap="8">
       <aside class="hidden lg:block" m="t-8">
-        <Author
-          :name="frontmatter.author"
-          :twitter="frontmatter.twitter"
-          :gravatar="frontmatter.gravatar"
-        />
+        <div position="sticky top-22">
+          <Author
+            :name="frontmatter.author"
+            :twitter="frontmatter.twitter"
+            :gravatar="frontmatter.gravatar"
+          />
 
-        <router-link
-          flex="~ row"
-          items="center"
-          class="dark:(text-white-900 opacity-60)"
-          space="x-2"
-          m="t-4"
-          to="/notes"
-        >
-          <carbon-arrow-left />
-          <span>
-            Back to Notes
-          </span>
-        </router-link>
+          <router-link
+            flex="~ row"
+            items="center"
+            class="dark:(text-white-900 opacity-60)"
+            space="x-2"
+            m="t-4"
+            to="/notes"
+          >
+            <carbon-arrow-left />
+            <span>
+              Back to Notes
+            </span>
+          </router-link>
+        </div>
       </aside>
       <article col="span-2" m="t-8">
         <img v-if="frontmatter.cover" border="rounded" :src="frontmatter.cover" />
