@@ -12,7 +12,7 @@ useTypedJS(target, {
   backDelay: 1500,
   showCursor: false,
   loop: true,
-  strings: ['Hello,', 'こんにちは,', 'Hola,', '你好,', 'नमस्ते,', 'Bonjour,'],
+  strings: ['Hello,', 'こんにちは,', 'Hola,', '你好,', 'नमस्ते,', 'Bonjour,', 'Привет'],
 })
 </script>
 
